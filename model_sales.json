@@ -1,0 +1,85 @@
+{
+  "data_field": {
+    "company": {
+      "verbose_name": "公司",
+      "type": "string"
+    },
+    "company_code": {
+      "verbose_name": "公司Code",
+      "type": "string"
+    },
+    "description": {
+      "verbose_name": "描述",
+      "type": "string"
+    },
+    "gg": {
+      "verbose_name": "GG",
+      "type": "string"
+    },
+    "gs_yh050": {
+      "verbose_name": "GS_YH050",
+      "type": "string"
+    },
+    "node_desc": {
+      "verbose_name": "节点描述",
+      "type": "string"
+    },
+    "node_name_fqdn": {
+      "verbose_name": "节点fqdn",
+      "type": "string"
+    },
+    "org1": {
+      "verbose_name": "ORG1",
+      "type": "string"
+    },
+    "org2": {
+      "verbose_name": "ORG2",
+      "type": "string"
+    },
+    "pc": {
+      "verbose_name": "利润中心",
+      "type": "string"
+    },
+    "pc_group": {
+      "verbose_name": "利润中心组",
+      "type": "string"
+    },
+    "pcg1": {
+      "verbose_name": "PCG1",
+      "type": "string"
+    },
+    "pcg2": {
+      "verbose_name": "PCG2",
+      "type": "string"
+    },
+    "pcg3": {
+      "verbose_name": "PCG3",
+      "type": "string"
+    },
+    "pcg4": {
+      "verbose_name": "PCG4",
+      "type": "string"
+    },
+    "person_responsible": {
+      "verbose_name": "人员职责",
+      "type": "string"
+    },
+    "product_line": {
+      "verbose_name": "产品线",
+      "type": "string"
+    },
+    "probi_update_st": {
+      "verbose_name": "更新标志",
+      "type": "string"
+    },
+    "probi_update_time": {
+      "verbose_name": "更新时间",
+      "format": "yyyy-MM-ddT HH:mm:ss.SSSZ+8:00",
+      "type": "date"
+    }
+  },
+  "mgmt_field": {
+    "copy_to": "full_name",
+    "index_name": "利润中心"
+  }
+}
