@@ -16,11 +16,12 @@ class Solution:
                 a = s[i]
                 i += 1
             else:
-                i+=1
+                i += 1
             if s[j].isalpha() or s[j].isalnum():
                 b = s[j]
                 j -= 1
-            else:j-=1
+            else:
+                j -= 1
 
             if a != b:
                 return False

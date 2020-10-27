@@ -5,23 +5,41 @@ import copy
 from typing import List
 
 
+# 方法1
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
-        new_nums = []
-        max_num = max(nums)
-        nums_index = [-1 for i in range(max_num + 1)]
-        for index, i in enumerate(nums):
-            if i != 0:
-                nums_index[i] = index
-        for i in nums_index:
-            if i != -1:
-                new_nums.append(nums[i])
-        for i in range(len(nums) - len(new_nums)):
-            new_nums.append(0)
+        j = 0
+        for i in range(len(nums)):
+            if nums[i]:
+                nums[j] = nums[i]
+                j += 1
+        for i in range(j, len(nums)):
+            nums[i] = 0
 
 
-nums = [0, 1, 0, 3, 12]
+nums = [2, 1]
+
+
+# Solution().moveZeroes(nums)
+# print(nums)
+
+# 方法2  快排
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        j = 0
+        for index, num in enumerate(nums):
+            if num:
+                if index > j:
+                    nums[j] = nums[index]
+                    nums[index] = 0
+                j += 1
+
+
+Solution().moveZeroes(nums)
 print(nums)
