@@ -5,15 +5,37 @@ import copy
 from typing import List
 
 
+# 方法1
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
         j = 0
-        for index, i in enumerate(nums):
-            if i:
-                if j < index:
+        for i in range(len(nums)):
+            if nums[i]:
+                nums[j] = nums[i]
+                j += 1
+        for i in range(j, len(nums)):
+            nums[i] = 0
+
+
+nums = [2, 1]
+
+
+# Solution().moveZeroes(nums)
+# print(nums)
+
+# 方法2  快排
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        j = 0
+        for index, num in enumerate(nums):
+            if num:
+                if index > j:
                     nums[j] = nums[index]
                     nums[index] = 0
                 j += 1
