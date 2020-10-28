@@ -10,18 +10,15 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        new_nums = []
-        max_num = max(nums)
-        nums_index = [-1 for i in range(max_num + 1)]
+        j = 0
         for index, i in enumerate(nums):
-            if i != 0:
-                nums_index[i] = index
-        for i in nums_index:
-            if i != -1:
-                new_nums.append(nums[i])
-        for i in range(len(nums) - len(new_nums)):
-            new_nums.append(0)
+            if i:
+                if j < index:
+                    nums[j] = nums[index]
+                    nums[index] = 0
+                j += 1
 
 
 nums = [0, 1, 0, 3, 12]
+Solution().moveZeroes(nums)
 print(nums)
